@@ -4,6 +4,7 @@ const Experience = (props) => {
 	const experience = props.experience;
 	const updateExperience = props.updateExperience;
 	const addExperience = props.addExperience;
+	const deleteExperience = props.deleteExperience;
 
 	let allExperience = experience?.map((item, index) => (
 		<div className="flex flex-col gap-0" key={index}>
@@ -66,6 +67,19 @@ const Experience = (props) => {
 				rows="10"
 				placeholder="Job Description"
 			></textarea>
+			{index > 0 ? (
+				<button
+					type="button"
+					className="bg-slate-900 w-full my-4 text-white p-2 rounded-md"
+					onClick={(e) => {
+						deleteExperience(index);
+					}}
+				>
+					Delete
+				</button>
+			) : (
+				''
+			)}
 			<hr className="my-4" />
 		</div>
 	));
