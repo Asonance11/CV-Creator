@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .input {
-	@apply ps-1 outline-none;
+	@apply ps-1 outline-none rounded;
 }
