@@ -2,7 +2,7 @@ import React from 'react';
 
 const PersonalInfo = ({ personalInfo, updatePersonalInfo }) => {
 	return (
-		<fieldset className="flex flex-col gap-0">
+		<fieldset className="flex flex-col gap-0 mt-4">
 			<legend className="text-black font-semibold text-xl">
 				Personal Information
 			</legend>
