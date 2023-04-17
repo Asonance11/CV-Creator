@@ -78,6 +78,12 @@ export default class Main extends Component {
 		});
 	};
 
+	deleteExperience = (key) => {
+		this.setState({
+			experience: this.state.experience.filter((item, index) => key !== index),
+		});
+	};
+
 	render() {
 		return (
 			<div className="p-10 bg-gray-300 font-sans flex justify-center">
