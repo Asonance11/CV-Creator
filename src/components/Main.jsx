@@ -14,7 +14,6 @@ export default class Main extends Component {
 				phoneNumber: '',
 				address: '',
 			},
-
 			experience: [
 				{
 					position: '',
@@ -58,6 +57,8 @@ export default class Main extends Component {
 						description: item.description,
 						[name]: value,
 					};
+				} else {
+					return item;
 				}
 			}),
 		});
@@ -66,7 +67,11 @@ export default class Main extends Component {
 	render() {
 		return (
 			<div className="p-10 bg-gray-300 font-sans flex justify-center">
-				<CVForm info={this.state} getPersonalInfo={this.updatePersonalInfo} />
+				<CVForm
+					info={this.state}
+					getPersonalInfo={this.updatePersonalInfo}
+					getExperience={this.updateExperience}
+				/>
 			</div>
 		);
 	}
