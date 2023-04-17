@@ -64,6 +64,20 @@ export default class Main extends Component {
 		});
 	};
 
+	addNewExperience = () => {
+		this.setState({
+			experience: this.state.experience.concat([
+				{
+					position: '',
+					company: '',
+					startDate: '',
+					endDate: '',
+					description: '',
+				},
+			]),
+		});
+	};
+
 	render() {
 		return (
 			<div className="p-10 bg-gray-300 font-sans flex justify-center">
