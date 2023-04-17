@@ -85,6 +85,7 @@ export default class Main extends Component {
 					info={this.state}
 					getPersonalInfo={this.updatePersonalInfo}
 					getExperience={this.updateExperience}
+					addExperience={this.addNewExperience}
 				/>
 			</div>
 		);

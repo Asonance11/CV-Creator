@@ -12,6 +12,7 @@ const CVForm = (props) => {
 			<Experience
 				experience={props.info.experience}
 				updateExperience={props.getExperience}
+				addExperience={props.addExperience}
 			/>
 		</form>
 	);

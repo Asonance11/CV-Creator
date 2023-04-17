@@ -3,6 +3,7 @@ import React from 'react';
 const Experience = (props) => {
 	const experience = props.experience;
 	const updateExperience = props.updateExperience;
+	const addExperience = props.addExperience;
 
 	let allExperience = experience?.map((item, index) => (
 		<div className="flex flex-col gap-0" key={index}>
@@ -65,12 +66,20 @@ const Experience = (props) => {
 				rows="10"
 				placeholder="Job Description"
 			></textarea>
+			<hr className="my-4" />
 		</div>
 	));
 	return (
 		<fieldset className="my-4">
 			<legend className="text-black font-semibold text-xl">Experience</legend>
 			{allExperience}
+			<button
+				type="button"
+				className="bg-slate-900 w-full my-4 text-white p-2 rounded-md"
+				onClick={addExperience}
+			>
+				Add
+			</button>
 		</fieldset>
 	);
 };
