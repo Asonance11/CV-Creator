@@ -14,6 +14,16 @@ export default class Main extends Component {
 				phoneNumber: '',
 				address: '',
 			},
+
+			experience: [
+				{
+					position: '',
+					company: '',
+					startDate: '',
+					endDate: '',
+					description: '',
+				},
+			],
 		};
 	}
 
@@ -30,6 +40,26 @@ export default class Main extends Component {
 				address: this.state.personalInfo.address,
 				[name]: value,
 			},
+		});
+	};
+
+	updateExperience = (e, val) => {
+		const name = e.target.name;
+		const value = e.target.value;
+
+		this.setState({
+			experience: this.state.experience.map((item, index) => {
+				if (index === val) {
+					return {
+						position: item.position,
+						company: item.company,
+						startDate: item.startDate,
+						endDate: item.endDate,
+						description: item.description,
+						[name]: value,
+					};
+				}
+			}),
 		});
 	};
 

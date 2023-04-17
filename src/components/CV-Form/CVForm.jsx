@@ -1,4 +1,5 @@
 import React from 'react';
+import Experience from './Experience';
 import PersonalInfo from './PersonalInfo';
 
 const CVForm = (props) => {
@@ -8,6 +9,7 @@ const CVForm = (props) => {
 				personalInfo={props.info.personalInfo}
 				updatePersonalInfo={props.getPersonalInfo}
 			/>
+			<Experience />
 		</form>
 	);
 };
