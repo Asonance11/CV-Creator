@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PersonalInfo = () => {
+const PersonalInfo = ({ personalInfo, updatePersonalInfo }) => {
 	return (
 		<fieldset className="flex flex-col gap-0">
 			<legend className="text-black font-semibold text-xl">
@@ -14,6 +14,8 @@ const PersonalInfo = () => {
 				id="first-name"
 				placeholder="John"
 				maxLength={20}
+				value={personalInfo.firstName}
+				onChange={updatePersonalInfo}
 			/>
 			<label htmlFor="last-name">Last Name</label>
 			<input
@@ -23,6 +25,8 @@ const PersonalInfo = () => {
 				id="last-name"
 				placeholder="Doe"
 				maxLength={20}
+				value={personalInfo.lastName}
+				onChange={updatePersonalInfo}
 			/>
 			<label htmlFor="job-title">Job Title</label>
 			<input
@@ -32,6 +36,8 @@ const PersonalInfo = () => {
 				id="job-title"
 				placeholder="Junior Frontend Developer"
 				maxLength={50}
+				value={personalInfo.jobTitle}
+				onChange={updatePersonalInfo}
 			/>
 			<label htmlFor="email">Email</label>
 			<input
@@ -40,6 +46,8 @@ const PersonalInfo = () => {
 				name="email"
 				id="email"
 				placeholder="JohnDoe@example.com"
+				value={personalInfo.email}
+				onChange={updatePersonalInfo}
 			/>
 			<label htmlFor="address">Address</label>
 			<input
@@ -49,6 +57,8 @@ const PersonalInfo = () => {
 				placeholder="21, Jump Street, Florida"
 				className="input"
 				maxLength={70}
+				value={personalInfo.address}
+				onChange={updatePersonalInfo}
 			/>
 			<label htmlFor="phone-number">Phone Number</label>
 			<input
@@ -56,6 +66,8 @@ const PersonalInfo = () => {
 				name="phone-number"
 				id="phone-number"
 				className="input"
+				value={personalInfo.phoneNumber}
+				onChange={updatePersonalInfo}
 			/>
 		</fieldset>
 	);
