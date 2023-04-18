@@ -136,6 +136,19 @@ export default class Main extends Component {
 	};
 
 	// skills
+	updateSkills = (e, val) => {
+		let value = e.target.valur;
+		this.setState({
+			skills: this.state.skills.map((skill, index) => {
+				if (index === val) {
+					return value;
+				} else {
+					return skill;
+				}
+			}),
+		});
+	};
+
 	addNewSkill = () => {
 		this.setState({
 			skills: this.state.skills.concat(''),
