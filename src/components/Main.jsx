@@ -173,6 +173,9 @@ export default class Main extends Component {
 					getEducation={this.updateEducation}
 					addEducation={this.addNewEducation}
 					deleteEducation={this.deleteEducation}
+					getSkills={this.updateSkills}
+					addSkill={this.addNewSkill}
+					deleteSkill={this.deleteSkill}
 				/>
 			</div>
 		);
