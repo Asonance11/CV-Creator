@@ -2,7 +2,7 @@ import React from 'react';
 
 const Experience = (props) => {
 	const workExperience = props.experience.map((job, index) => (
-		<div>
+		<div key={index + 3}>
 			<div className="flex items-center justify-between">
 				<h3 className="text-black text-lg font-bold">
 					{job.position.toUpperCase()}

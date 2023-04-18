@@ -2,7 +2,7 @@ import React from 'react';
 
 const Education = (props) => {
 	const allEducation = props.education.map((degree, index) => (
-		<div>
+		<div key={index + 4}>
 			<div className="flex items-center justify-between">
 				<h3 className="text-black text-lg font-bold">
 					{degree.course.toUpperCase()}
