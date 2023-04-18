@@ -1,3 +1,9 @@
+import {
+	faEnvelope,
+	faLocation,
+	faPhone,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Personal = (props) => {
@@ -18,9 +24,17 @@ const Personal = (props) => {
 			</h3>
 			<hr />
 			<div className="flex items-center justify-center gap-4">
-				<li>{phoneNumber}</li>
-				<li>{email}</li>
-				<li>{address}</li>
+				<div className="flex items-center gap-1">
+					<FontAwesomeIcon icon={faPhone} /> {phoneNumber}
+				</div>
+				<div className="flex items-center gap-2">
+					<FontAwesomeIcon icon={faEnvelope} />
+					{email}
+				</div>
+				<div className="flex items-center gap-2">
+					<FontAwesomeIcon icon={faLocation} />
+					{address}
+				</div>
 			</div>
 			<hr />
 		</section>
