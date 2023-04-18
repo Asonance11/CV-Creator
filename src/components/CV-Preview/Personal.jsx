@@ -13,7 +13,7 @@ const Personal = (props) => {
 			<h1 className="text-5xl font-bold text-black text-center">
 				{firstName.toUpperCase() + ' ' + lastName.toUpperCase()}
 			</h1>
-			<h3 className="text-center text-xl font-semibold">
+			<h3 className="text-center text-xl font-medium">
 				{jobTitle.toUpperCase()}
 			</h3>
 			<hr />

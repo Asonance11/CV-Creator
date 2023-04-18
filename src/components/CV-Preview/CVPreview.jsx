@@ -8,7 +8,7 @@ const CVPreview = (props) => {
 	return (
 		<section
 			id="cv-preview"
-			className="mb-8 bg-white p-4 font-serif shadow-2xl w-[350px] sm:w-[80vw]"
+			className="mb-8 bg-white p-4 text-black font-serif shadow-2xl w-[350px] sm:w-[80vw] "
 		>
 			<Personal information={props.info.personalInfo} />
 			<Experience experience={props.info.experience} />

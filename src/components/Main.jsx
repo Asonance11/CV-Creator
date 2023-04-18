@@ -164,7 +164,7 @@ export default class Main extends Component {
 
 	render() {
 		return (
-			<div className="p-10 bg-gray-300 font-sans flex flex-col justify-center ">
+			<div className="p-10 bg-gray-300 font-sans flex flex-col justify-center items-center ">
 				<CVForm
 					info={this.state}
 					getPersonalInfo={this.updatePersonalInfo}

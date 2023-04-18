@@ -68,6 +68,10 @@ const Experience = (props) => {
 				cols="30"
 				rows="10"
 				placeholder="Job Description"
+				value={experience.description}
+				onChange={(e) => {
+					updateExperience(e, index);
+				}}
 			></textarea>
 			{index > 0 ? (
 				<button
