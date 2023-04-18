@@ -143,6 +143,9 @@ export default class Main extends Component {
 					getExperience={this.updateExperience}
 					addExperience={this.addNewExperience}
 					deleteExperience={this.deleteExperience}
+					getEducation={this.updateEducation}
+					addEducation={this.addNewEducation}
+					deleteEducation={this.deleteEducation}
 				/>
 			</div>
 		);
