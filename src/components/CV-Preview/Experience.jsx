@@ -22,6 +22,7 @@ const Experience = (props) => {
 				PROFESSIONAL EXPERIENCE
 			</h2>
 			<div className="flex flex-col gap-4 my-4">{workExperience}</div>
+			<hr />
 		</section>
 	);
 };
