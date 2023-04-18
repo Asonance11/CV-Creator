@@ -31,6 +31,7 @@ export default class Main extends Component {
 					endDate: '',
 				},
 			],
+			skills: [],
 		};
 	}
 
@@ -131,6 +132,19 @@ export default class Main extends Component {
 	deleteEducation = (key) => {
 		this.setState({
 			education: this.state.education.filter((item, index) => key !== index),
+		});
+	};
+
+	// skills
+	addNewSkill = () => {
+		this.setState({
+			skills: this.state.skills.concat(''),
+		});
+	};
+
+	deleteSkill = (key) => {
+		this.setState({
+			skills: this.state.skills.filter((item, index) => key !== index),
 		});
 	};
 
