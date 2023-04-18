@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CVForm from './CV-Form/CVForm';
+import CVPreview from './CV-Preview/CVPreview';
 
 export default class Main extends Component {
 	constructor() {
@@ -163,7 +164,7 @@ export default class Main extends Component {
 
 	render() {
 		return (
-			<div className="p-10 bg-gray-300 font-sans flex justify-center">
+			<div className="p-10 bg-gray-300 font-sans flex flex-col justify-center ">
 				<CVForm
 					info={this.state}
 					getPersonalInfo={this.updatePersonalInfo}
@@ -177,6 +178,7 @@ export default class Main extends Component {
 					addSkill={this.addNewSkill}
 					deleteSkill={this.deleteSkill}
 				/>
+				<CVPreview />
 			</div>
 		);
 	}
