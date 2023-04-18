@@ -6,8 +6,8 @@ const Skills = (props) => {
 	));
 
 	return (
-		<section>
-			<h2>Skills</h2>
+		<section className="my-4 text-black">
+			<h2 className="text-center text-2xl text-black font-semibold">SKILLS</h2>
 			{allSkills}
 		</section>
 	);
