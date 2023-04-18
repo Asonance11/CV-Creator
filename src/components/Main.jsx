@@ -23,6 +23,14 @@ export default class Main extends Component {
 					description: '',
 				},
 			],
+			education: [
+				{
+					school: '',
+					course: '',
+					startDate: '',
+					endDate: '',
+				},
+			],
 		};
 	}
 
@@ -42,6 +50,7 @@ export default class Main extends Component {
 		});
 	};
 
+	// Experience
 	updateExperience = (e, val) => {
 		const name = e.target.name;
 		const value = e.target.value;
@@ -81,6 +90,47 @@ export default class Main extends Component {
 	deleteExperience = (key) => {
 		this.setState({
 			experience: this.state.experience.filter((item, index) => key !== index),
+		});
+	};
+
+	// Education
+	updateEducation = (e, val) => {
+		const name = e.target.name;
+		const value = e.target.value;
+
+		this.setState({
+			education: this.state.education.map((item, index) => {
+				if (index === val) {
+					return {
+						school: item.school,
+						course: item.course,
+						startDate: item.startDate,
+						endDate: item.endDate,
+						[name]: value,
+					};
+				} else {
+					return item;
+				}
+			}),
+		});
+	};
+
+	addNewEducation = () => {
+		this.setState({
+			education: this.state.education.concat([
+				{
+					school: '',
+					course: '',
+					startDate: '',
+					endDate: '',
+				},
+			]),
+		});
+	};
+
+	deleteEducation = (key) => {
+		this.setState({
+			education: this.state.education.filter((item, index) => key !== index),
 		});
 	};
 
