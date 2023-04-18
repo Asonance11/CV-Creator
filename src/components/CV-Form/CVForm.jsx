@@ -2,6 +2,7 @@ import React from 'react';
 import Education from './Education';
 import Experience from './Experience';
 import PersonalInfo from './PersonalInfo';
+import Skills from './Skills';
 
 const CVForm = (props) => {
 	return (
@@ -21,6 +22,12 @@ const CVForm = (props) => {
 				updateEducation={props.getEducation}
 				addEducation={props.addEducation}
 				deleteEducation={props.deleteEducation}
+			/>
+			<Skills
+				skills={props.info.skills}
+				updateSkills={props.getSkills}
+				addSkill={props.addSkill}
+				deleteSkill={props.deleteSkill}
 			/>
 		</form>
 	);
