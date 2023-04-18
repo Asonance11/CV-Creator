@@ -29,12 +29,14 @@ const Skills = (props) => {
 			>
 				Delete
 			</button>
+			<hr className="my-4" />
 		</div>
 	));
 
 	return (
 		<fieldset className="my-4">
 			<legend className="text-black font-semibold text-xl">Skills</legend>
+			{allSkills}
 			<button
 				type="button"
 				className="bg-slate-900 w-full my-4 text-white p-2 rounded-md"
@@ -42,7 +44,6 @@ const Skills = (props) => {
 			>
 				Add
 			</button>
-			{allSkills}
 		</fieldset>
 	);
 };
