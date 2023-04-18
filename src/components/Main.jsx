@@ -178,7 +178,7 @@ export default class Main extends Component {
 					addSkill={this.addNewSkill}
 					deleteSkill={this.deleteSkill}
 				/>
-				<CVPreview />
+				<CVPreview info={this.state} />
 			</div>
 		);
 	}
