@@ -15,7 +15,7 @@ const Experience = (props) => {
 				name="position"
 				id={`position${index}`}
 				placeholder="Junior Backend Developer"
-				minLength={50}
+				maxLength={50}
 				value={experience.position}
 				onChange={(e) => {
 					updateExperience(e, index);
@@ -28,7 +28,7 @@ const Experience = (props) => {
 				name="company"
 				id={`position${index}`}
 				placeholder="Amazon"
-				minLength={30}
+				maxLength={30}
 				value={experience.company}
 				onChange={(e) => {
 					updateExperience(e, index);
@@ -37,26 +37,28 @@ const Experience = (props) => {
 			<label htmlFor={`start-date${index}`}>Start Date</label>
 			<input
 				className="input"
-				type="date"
+				type="text"
 				name="startDate"
 				id={`start-date${index}`}
-				placeholder=""
+				placeholder="2020"
 				value={experience.startDate}
 				onChange={(e) => {
 					updateExperience(e, index);
 				}}
+				maxLength={5}
 			/>
 			<label htmlFor={`end-date${index}`}>End Date</label>
 			<input
 				className="input"
-				type="date"
+				type="text"
 				name="endDate"
 				id={`end-date${index}`}
-				placeholder=""
+				placeholder="Present"
 				value={experience.endDate}
 				onChange={(e) => {
 					updateExperience(e, index);
 				}}
+				maxLength={8}
 			/>
 			<label htmlFor={`description${index}`}>Job Description</label>
 			<textarea
