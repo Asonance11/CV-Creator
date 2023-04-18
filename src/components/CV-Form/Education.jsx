@@ -15,7 +15,7 @@ const Education = (props) => {
 				id={`school${index}`}
 				className="input"
 				placeholder="Harvard University"
-				maxLength={70}
+				maxLength={50}
 				value={education.school}
 				onChange={(e) => {
 					updateEducation(e, index);
@@ -32,6 +32,7 @@ const Education = (props) => {
 				onChange={(e) => {
 					updateEducation(e, index);
 				}}
+				maxLength={30}
 			/>
 			<label htmlFor={`start-date${index}`}>Start Date</label>
 			<input
