@@ -138,7 +138,7 @@ export default class Main extends Component {
 
 	// skills
 	updateSkills = (e, val) => {
-		let value = e.target.value;
+		const value = e.target.value;
 		this.setState({
 			skills: this.state.skills.map((skill, index) => {
 				if (index === val) {
