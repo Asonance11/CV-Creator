@@ -10,6 +10,7 @@ const Skills = (props) => {
 		<div key={index} className="flex flex-col gap-0">
 			<label htmlFor={`skill${index}`}>Skill</label>
 			<input
+				className="input"
 				type="text"
 				name="skill"
 				id={`skill${index}`}
