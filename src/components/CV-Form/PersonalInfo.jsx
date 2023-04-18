@@ -63,7 +63,7 @@ const PersonalInfo = ({ personalInfo, updatePersonalInfo }) => {
 			<label htmlFor="phone-number">Phone Number</label>
 			<input
 				type="tel"
-				name="phone-number"
+				name="phoneNumber"
 				id="phone-number"
 				className="input"
 				value={personalInfo.phoneNumber}
