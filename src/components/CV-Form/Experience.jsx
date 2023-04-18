@@ -60,7 +60,7 @@ const Experience = (props) => {
 			/>
 			<label htmlFor={`description${index}`}>Job Description</label>
 			<textarea
-				className="w-full input"
+				className="w-full input resize-none"
 				name="description"
 				id={`description${index}`}
 				cols="30"
